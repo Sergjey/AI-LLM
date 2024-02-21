@@ -1,0 +1,91 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('table-background.webp'); /* Замените на ваше изображение фона */
+    background-size: cover;
+}
+
+.game-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dice {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    position: relative;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    transform: translate(-50%, -50%); /* Добавлено для центрирования */
+}
+
+/* Стили для точек в зависимости от их расположения будут добавлены здесь */
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+    background-color: #004b9b;
+}
+
+.history-container {
+    margin-top: 20px;
+}
+
+.history-container h2 {
+    font-size: 1.5em;
+}
+
+.history-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history-container ul li {
+    text-align: left;
+    font-size: 1em;
+}
+
+@keyframes roll {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.rolling {
+  animation: roll 1s ease-in-out;
+}
